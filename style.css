@@ -1,0 +1,484 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b1220;
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+
+/* ================= NAVBAR ================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(11, 18, 32, 0.95);
+
+    border-bottom: 1px solid #263754;
+
+    backdrop-filter: blur(10px);
+}
+
+nav {
+    max-width: 1150px;
+    min-height: 75px;
+
+    margin: auto;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #dbe4f0;
+    text-decoration: none;
+    font-size: 17px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    max-width: 1150px;
+
+    min-height: 85vh;
+
+    margin: auto;
+
+    padding: 80px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+/* PHOTO LEFT */
+
+.profile-photo {
+    flex-shrink: 0;
+
+    width: 280px;
+    height: 280px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo img {
+    width: 260px;
+    height: 260px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #38bdf8;
+
+    box-shadow:
+        0 0 0 10px rgba(56, 189, 248, 0.08),
+        0 0 45px rgba(56, 189, 248, 0.18);
+
+    display: block;
+}
+
+
+/* TEXT RIGHT */
+
+.hero-text {
+    flex: 1;
+}
+
+.hello {
+    color: #38bdf8;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.hero h1 {
+    font-size: 60px;
+
+    line-height: 1.1;
+
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    color: #94a3b8;
+
+    font-size: 27px;
+
+    margin-bottom: 20px;
+}
+
+.hero h2 span {
+    color: #38bdf8;
+}
+
+.intro {
+    color: #cbd5e1;
+
+    font-size: 18px;
+
+    max-width: 700px;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.buttons {
+    margin-top: 30px;
+
+    display: flex;
+
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 26px;
+
+    border-radius: 8px;
+
+    background: #38bdf8;
+
+    color: #07111f;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+}
+
+.btn.outline {
+    background: transparent;
+
+    color: #38bdf8;
+
+    border: 1px solid #38bdf8;
+}
+
+
+/* ================= SECTIONS ================= */
+
+section:not(.hero) {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 90px 25px;
+}
+
+.section-title {
+    text-align: center;
+
+    font-size: 38px;
+
+    margin-bottom: 40px;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-box {
+    max-width: 800px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    text-align: center;
+
+    background: #121e32;
+
+    border: 1px solid #263754;
+
+    border-radius: 15px;
+}
+
+.about-box p {
+    color: #cbd5e1;
+
+    font-size: 18px;
+}
+
+
+/* ================= SKILLS ================= */
+
+.skills-container {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.skill {
+    padding: 20px;
+
+    text-align: center;
+
+    background: #142038;
+
+    border: 1px solid #263754;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-6px);
+
+    border-color: #38bdf8;
+
+    color: #38bdf8;
+}
+
+
+/* ================= PROJECTS ================= */
+
+.projects-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.project-card {
+    padding: 28px;
+
+    background: #142038;
+
+    border: 1px solid #263754;
+
+    border-radius: 14px;
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #38bdf8;
+}
+
+.project-card span {
+    color: #38bdf8;
+
+    font-weight: bold;
+}
+
+.project-card h3 {
+    font-size: 22px;
+
+    margin: 10px 0;
+}
+
+.project-card p {
+    color: #aebbd0;
+
+    margin-bottom: 20px;
+}
+
+.project-card a {
+    color: #38bdf8;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* ================= CONTACT ================= */
+
+#contact {
+    text-align: center;
+}
+
+.contact-box {
+    max-width: 800px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background: #121e32;
+
+    border: 1px solid #263754;
+
+    border-radius: 15px;
+}
+
+.contact-box p {
+    color: #cbd5e1;
+
+    font-size: 18px;
+}
+
+.contact-box a {
+    color: #38bdf8;
+
+    text-decoration: none;
+}
+
+.social-links {
+    margin-top: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+}
+
+.social-links a {
+    font-weight: bold;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    color: #94a3b8;
+
+    border-top: 1px solid #263754;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 40px;
+
+        padding-top: 70px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .intro {
+        margin: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    nav {
+        flex-direction: column;
+
+        padding: 18px 20px;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .profile-photo {
+        width: 220px;
+        height: 220px;
+    }
+
+    .profile-photo img {
+        width: 205px;
+        height: 205px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .btn {
+        width: 200px;
+
+        text-align: center;
+    }
+}
